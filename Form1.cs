@@ -1,13 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClosedXML.Excel;
 
@@ -16,7 +11,7 @@ namespace shift_xlsx
     public partial class Form1 : Form
     {
         Dictionary<string, int[,]> shiftDic = new Dictionary<string, int[,]>();
-        /* シフト管理ハッシュ
+        /* シフト管理ディクショナリ
          * Key1: string 講師名
          * Key2: int 曜日
          * 曜日はDateTimeのDayOfWeek準拠 (Sunday:0, Saturday:6)
@@ -118,13 +113,7 @@ namespace shift_xlsx
                     }
                 }
             }
-
             name = "";
-
-            //foreach(Control item in gb_btns.Controls)
-            //{
-                //((Button)item).Enabled = false;
-            //}
         }
 
         private void tile_click(object sender, EventArgs e)
